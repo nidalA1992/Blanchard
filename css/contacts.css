@@ -1,0 +1,256 @@
+.contacts {
+  padding-top: 37px;
+  padding-bottom: 38px;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.contacts__container {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.galery-address {
+  max-width: 16%;
+  font-style: normal;
+  line-height: 32px;
+}
+
+.galery-address strong {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.contacts__callback-form {
+  justify-content: space-between;
+}
+
+.callback-form__label {
+  margin-right: 20px;
+  position: relative;
+  width: 100%;
+}
+
+.callback-form__label-error-container {
+  position: absolute;
+  top: -45%;
+  left: 25px;
+  color: red;
+}
+
+.callback-input {
+  border: 1px solid #333;
+  border-radius: 100px;
+  padding: 15px 56px 15px 24px;
+  width: 100%;
+  transition: background-color 200ms ease-in;
+}
+
+.callback-input:hover {
+  background-color: #eaeaea;
+}
+
+.callback-input:focus {
+  outline: none;
+  background-color: #eaeaea;
+}
+
+.callback-button {
+  border: 1px solid var(--main-color);
+  border-radius: 100px;
+  padding: 0.84em 1.895em;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--main-color);
+  transition: color 200ms ease-in,
+    background-color 200ms ease-in,
+    outline 200ms ease-in;
+}
+
+.callback-button:hover {
+  background-color: var(--main-color);
+  color: white;
+}
+
+.callback-button:focus {
+  outline: 2px solid var(--hover-color);
+  outline-offset: 2px;
+}
+
+.callback-button:active {
+  outline: 3px solid #d1a9f0;
+  outline-offset: -2px;
+  background-color: var(--active-color);
+}
+
+.messangers {
+  transform: translateY(3px);
+  max-width: 20%;
+}
+
+.messangers__link {
+  display: inline-block;
+  transition: opacity 200ms ease-in;
+}
+
+.messangers__link:hover {
+  opacity: 0.4;
+}
+
+.messangers__link:focus {
+  outline: none;
+  opacity: 0.4;
+}
+
+.messangers__link:active {
+  opacity: 1;
+}
+
+.messangers__link:active > svg {
+  border-radius: 50%;
+  outline: 1px solid var(--main-color);
+  outline-offset: -1px;
+}
+
+.messangers__title {
+  margin-bottom: 7px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.messangers__list-item {
+  display: inline-block;
+}
+
+.messangers__list-item:not(:last-child) {
+  margin-right: 15px;
+}
+
+@media (max-width: 1366px) {
+  .contacts {
+    padding-top: 42px;
+    padding-bottom: 42px;
+  }
+
+  .contacts__container {
+    flex-direction: column;
+  }
+
+  .contacts__galery-address {
+    margin-bottom: 30px;
+    align-self: flex-start;
+  }
+
+  .galery-address {
+    max-width: none;
+  }
+
+  .contacts__callback-form {
+    margin-bottom: 30px;
+    width: 100%;
+  }
+
+  .messangers {
+    max-width: none;
+  }
+
+  .contacts__messangers {
+    align-self: flex-start;
+  }
+
+  .callback-button {
+    padding: 0.84em 2.28em;
+  }
+}
+
+@media (max-width: 976px) {
+  .contacts {
+    padding-top: 42px;
+    padding-bottom: 42px;
+  }
+
+  .contacts__callback-form {
+    flex-wrap: wrap;
+  }
+
+  .callback-form__label {
+    margin-bottom: 12px;
+    margin-right: 0;
+    width: 48.5%;
+  }
+
+  .callback-input:nth-child(1) {
+    margin-right: 12px;
+  }
+
+  .callback-button {
+    padding: 15px 29px;
+  }
+}
+
+@media (max-width: 576px) {
+  .contacts {
+    padding-top: 1px;
+    padding-bottom: 20px;
+  }
+
+  .contacts__container {
+    border: none;
+    justify-content: start;
+  }
+
+  .galery-address {
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  .galery-address strong {
+    font-size: 18px;
+  }
+
+  .contacts__callback-form {
+    flex-direction: column;
+    margin-bottom: 24px;
+    min-height: 160px;
+  }
+
+  .callback-form__label {
+    margin: 0;
+    width: 100%;
+  }
+
+  .callback-input {
+    padding-top: 9px;
+    padding-bottom: 11px;
+  }
+
+  .callback-input:nth-child(1) {
+    margin-right: 0;
+  }
+
+  .callback-form__label-error-container {
+    top: -40%;
+    font-size: 12px;
+  }
+
+  .callback-button {
+    align-self: flex-start;
+    padding: 13px 34px;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .messangers__title {
+    margin-bottom: 11px;
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  .messangers__link svg {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+

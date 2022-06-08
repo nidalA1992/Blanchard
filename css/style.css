@@ -1,0 +1,240 @@
+/* global variable */
+:root {
+  --main-color: #9d5cd0;
+  --hover-color: #c283f3;
+  --active-color: #7943a4;
+  --border-color: #cacaca;
+  --header-font-size: 18px;
+  --title-font-size: 48px;
+  --subtitle-font-size: 24px;
+  --title-font-size-mob: 28px;
+  --descr-font-size-mob: 14px;
+}
+
+/* fonts */
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../fonts/OpenSans/OpenSans-Regular.woff2') format('woff2'),
+       url('../fonts/OpenSans/OpenSans-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../fonts/OpenSans/OpenSans-Italic.woff2') format('woff2'),
+       url('../fonts/OpenSans/OpenSans-Italic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../fonts/OpenSans/OpenSans-SemiBold.woff2') format('woff2'),
+       url('../fonts/OpenSans/OpenSans-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../fonts/OpenSans/OpenSans-Bold.woff2') format('woff2'),
+       url('../fonts/OpenSans/OpenSans-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  font-family: 'OpenSans', sans-serif;
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* resets */
+
+.title {
+  margin: 0;
+  font-weight: 400;
+  font-size: var(--title-font-size);
+}
+
+.descr {
+  line-height: 32px;
+}
+
+.list-reset {
+  padding: 0;
+  list-style: none;
+}
+
+.button-reset {
+  border: none;
+  line-height: 1em;
+  cursor: pointer;
+  background: none;
+}
+
+.link-reset {
+  color: initial;
+  text-decoration: none;
+}
+
+/* other */
+
+.flex {
+  display: flex;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  margin: -1px;
+  border: 0;
+  width: 1px;
+  height: 1px;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.btn-icon {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  color: white;
+  background-color: #ececec;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.logo {
+  transition: outline var(--transition-delay) var(--transition-timing),
+    outline-offset var(--transition-delay) var(--transition-timing);
+}
+
+.logo:focus {
+  outline: 1px solid var(--active-color);
+  outline-offset: 10px;
+}
+
+.logo:active {
+  outline-offset: 9px;
+}
+
+.btn-icon::before {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  top: 37.5%;
+  left: 40%;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  width: 6px;
+  height: 6px;
+  transform: rotate(45deg);
+}
+
+/* убирает крестик со строки поиска */
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration { opacity: 0; position: relative; z-index: 5; }
+
+/* scroll-bar */
+::-webkit-scrollbar {
+  width: 0.8vw;
+  height: 1vh;
+}
+
+/* swipper-nptification */
+
+.swiper-notification {
+  display: none;
+}
+
+::-webkit-scrollbar-track {
+  background-color: black;
+  margin-right: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: white;
+}
+
+/* scrollbar mozila */
+
+@supports (scrollbar-color: white black) {
+  * {
+    scrollbar-color: white black;
+    scrollbar-width: thin;
+  }
+}
+
+/* ui-kit */
+
+.hover-effects:focus {
+  outline: none;
+  background-color: var(--active-color);
+}
+
+.hover-effects:hover {
+  color: var(--hover-color);
+}
+
+.hover-effects:active {
+  color: var(--active-color);
+  background-color: transparent;
+}
+
+/* media query */
+
+.container {
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1700px;
+}
+
+@media (max-width: 1366px) {
+  .container {
+    padding: 0 50px;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .title {
+    font-size: var(--descr-font-size-mob);
+  }
+
+  .descr {
+    line-height: 28px;
+  }
+
+  .section-offset {
+    margin-bottom: 50px;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+}

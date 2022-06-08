@@ -1,0 +1,19 @@
+.map {
+  padding: 0;
+  height: 700px;
+}
+
+[class*="ground-pane"] {
+  filter: grayscale(1);
+}
+
+.ymaps-2-1-79-map-copyrights-promo {
+  display: none;
+}
+
+@media (max-width: 576px) {
+  .map {
+    height: 320px;
+  }
+}
+
